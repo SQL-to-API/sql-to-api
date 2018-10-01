@@ -20,6 +20,7 @@ SQL to API idea is to set convention that enables using SQL to query API for dat
   });
 });` anyway join clause and inner braces mean another fetch
 or https://stackoverflow.com/questions/6324547/how-to-handle-many-to-many-relationships-in-a-restful-api
+or even better https://stackoverflow.com/questions/46581937/restful-api-with-relationships
 
 # Code Structure
 
