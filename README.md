@@ -8,3 +8,10 @@ SQL to API idea is to set convention that enables using SQL to query API for dat
 
 `SELECT * FROM users WHERE name=Jack ORDER BY age` => `fetch('/api/users&name=Jack').sort((userA,userB) => userA.age-userB.age)`
 
+
+# Code Structure
+
+- Converter is Singleton
+- Converter is configured through "configure(settings)" method where settings parameter is JSON
+- Converter converts given sql to client syntax through "convertSQLToYourProgrammingLanguage(sql)"
+
