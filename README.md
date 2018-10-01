@@ -8,3 +8,13 @@ SQL to API idea is to set convention that enables using SQL to query API for dat
 
 `SELECT * FROM users WHERE name=Jack ORDER BY age` => `fetch('/api/users&name=Jack').sort((userA,userB) => userA.age-userB.age)`
 
+# existing API design guidelines
+
+https://cloud.google.com/apis/design/
+https://blinkboxbooks.github.io/2014/11/18/restful-api-design-guidelines.html
+https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+
+MS API design guideline 
+https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md
+is not REST...
+https://www.infoq.com/news/2016/07/microsoft-rest-api/
