@@ -4,9 +4,9 @@ SQL to API idea is to set convention that enables using SQL to query API for dat
 
 `SELECT * FROM users` => `fetch('/api/users')`
 
-`SELECT * FROM users WHERE name=Jack` => `fetch('/api/users&name=Jack')`
+`SELECT * FROM users WHERE name=Jack` => `fetch('/api/users?name=Jack')`
 
-`SELECT * FROM users WHERE name=Jack ORDER BY age` => `fetch('/api/users&name=Jack').sort((userA,userB) => userA.age-userB.age)`
+`SELECT * FROM users WHERE name=Jack ORDER BY age` => `fetch('/api/users?name=Jack').sort((userA,userB) => userA.age-userB.age)`
 
 
 # Code Structure
