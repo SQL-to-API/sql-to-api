@@ -4,9 +4,21 @@ SQL to API idea is to set convention that enables using SQL to query API for dat
 
 `SELECT * FROM users` => `fetch('/api/users')`
 
-`SELECT * FROM users WHERE name=Jack` => `fetch('/api/users&name=Jack')`
+`SELECT * FROM users WHERE name=Jack` => `fetch('/api/users?name=Jack')`
 
-`SELECT * FROM users WHERE name=Jack ORDER BY age` => `fetch('/api/users&name=Jack').sort((userA,userB) => userA.age-userB.age)`
+`SELECT * FROM users WHERE name=Jack ORDER BY age` => `fetch('/api/users?name=Jack').sort((userA,userB) => userA.age-userB.age)`
+
+
+`SELECT * FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;` => `fetch.all([fetch('/api/orders'),[fetch('/api/customers')]).then((orders,customers)=>{ 
+  return orders.filter(order=>{
+    customers.filter(customer=>{
+      if(customer.CustomerID === order.CustomerID){
+        return true;
+      }
+      return false;
+    });
+  });
+});` anyway join clause and inner braces mean another fetch
 
 
 # Code Structure
